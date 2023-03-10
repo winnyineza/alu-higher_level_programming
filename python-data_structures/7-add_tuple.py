@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
+<<<<<<< HEAD
     len_a = len(tuple_a)
     len_b = len(tuple_b)
 
@@ -26,3 +27,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
     new_tuple = (a1 + b1, a2 + b2)
 
     return (new_tuple)
+=======
+    a = tuple_a + (0, 0)
+    b = tuple_b + (0, 0)
+    return (a[0] + b[0], a[1] + b[1])
+>>>>>>> 93373a7b2ff75fbae4c47b55b6eda428ca4243a4
