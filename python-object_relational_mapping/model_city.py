@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""a python file that contains the class definition of a City"""
-
+"""
+Class definition of a City
+"""
 
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
@@ -8,9 +9,14 @@ from model_state import Base
 
 class City(Base):
     """
-    defines the class City that links to MySQL table 'cities'
+    City class that inherits from Base
+
+    Attributes:
+        id: Id city
+        name: Name of the city
+        state_id: State id
     """
-    __tablename__ = 'cities'
-    id = Column(Integer, primary_key=True, nullable=False)
+    __tablename__ = "cities"
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
