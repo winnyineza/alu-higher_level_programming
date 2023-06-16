@@ -5,7 +5,7 @@ const myObject = {
 };
 console.log(myObject);
 
-myObject.incr = function () {
+myObject.__proto__.incr = function () {
   this.value++;
 };
 
@@ -15,3 +15,4 @@ myObject.incr();
 console.log(myObject);
 myObject.incr();
 console.log(myObject);
+
